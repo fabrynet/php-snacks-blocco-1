@@ -7,20 +7,70 @@
   // Olimpia Milano - Cantù | 55-60
 
   $matches = [
-    'match1' => ['Cantù', 'Trieste', 80, 90],
-    'match2' => ['Milano', 'Sassari', 101, 67],
-    'match3' => ['Pesaro', 'Treviso', 99, 88],
-    'match4' => ['Trentino', 'Bologna', 87 , 85],
-    'match5' => ['Brescia', 'Brindisi', 80, 102],
-    'match6' => ['Varese', 'Venezia', 101, 67],
-    'match7' => ['Reggio Emilia', 'Cremona', 99, 83],
-    'match8' => ['Roma', 'Virtus Bologna', 92, 67]
+    [
+      'team1' => 'Cantù',
+      'team2' => 'Trieste',
+      'score1' => 80,
+      'score2' => 90
+    ],
+    [
+      'team1' => 'Milano',
+      'team2' => 'Sassari',
+      'score1' => 80,
+      'score2' => 90
+    ],
+    [
+      'team1' => 'Pesaro',
+      'team2' => 'Treviso',
+      'score1' => 80,
+      'score2' => 90
+    ],
+    [
+      'team1' => 'Trentino',
+      'team2' => 'Bologna',
+      'score1' => 80,
+      'score2' => 90
+    ],
+    [
+      'team1' => 'Brescia',
+      'team2' => 'Brindisi',
+      'score1' => 80,
+      'score2' => 90
+    ],
+    [
+      'team1' => 'Varese',
+      'team2' => 'Venezia',
+      'score1' => 80,
+      'score2' => 90
+    ],
+    [
+      'team1' => 'Reggio Emilia',
+      'team2' => 'Cremona',
+      'score1' => 80,
+      'score2' => 90
+    ],
+    [
+      'team1' => 'Roma',
+      'team2' => 'Virtus Bologna',
+      'score1' => 80,
+      'score2' => 90
+    ]
   ];
   // var_dump($matches);
 
-  foreach ($matches as $match) {
-    echo "<li>".$match[0]." - ".$match[1]." | ".$match[2]."-".$match[3]."</li>";
-  }
+  // foreach ($matches as $match) {
+  //   echo "<li>".$match['team1']." - ".$match['team2']." | ".$match['score1']."-".$match['score2']."</li>";
+  // }
+
+  $keys = array_keys($matches);
+    // var_dump($keys); die();
+    for ($i=0;$i<count($keys);$i++) {
+        $key = $keys[$i];
+        $match = $matches[$key];
+        echo $match['team1'] . ' - ' . $match['team2']
+            . ' | ' . $match['score1'] . '-' . $match['score2']
+            . '<br>';
+    }
 
   ?>
 </ol>
